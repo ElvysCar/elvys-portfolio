@@ -1,0 +1,17 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#020617"></rect>
+  <circle cx="950" cy="120" r="260" fill="#0891B2" opacity="0.25"></circle>
+  <circle cx="160" cy="540" r="220" fill="#2563EB" opacity="0.2"></circle>
+  <text x="80" y="230" fill="#22D3EE" font-family="Arial, sans-serif" font-size="34" font-weight="700" letter-spacing="8">
+    PORTFOLIO
+  </text>
+  <text x="80" y="325" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="78" font-weight="800">
+    Elvys Carrera
+  </text>
+  <text x="80" y="400" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="42" font-weight="600">
+    Data Engineer &amp; AI Developer
+  </text>
+  <text x="80" y="485" fill="#94A3B8" font-family="Arial, sans-serif" font-size="30">
+    Python • SQL • AWS Lambda • APIs • AI • React
+  </text>
+</svg>
