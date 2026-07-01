@@ -1,5 +1,6 @@
 import { Link, Navigate, useParams } from "react-router"
 import { getProjectBySlug } from "../data/projects"
+import Reveal from "../components/ui/Reveal"
 
 function ProjectDetail() {
   const { slug } = useParams()
@@ -19,7 +20,7 @@ function ProjectDetail() {
           ← Back to Projects
         </Link>
 
-        <div className="mt-12">
+        <Reveal className="mt-12">
           <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-400">
             {project.category}
           </p>
@@ -31,9 +32,9 @@ function ProjectDetail() {
           <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
             {project.summary}
           </p>
-        </div>
+        </Reveal>
 
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <Reveal className="mt-12 grid gap-6 md:grid-cols-3">
           <div className="rounded-3xl border border-white/10 bg-slate-900 p-6">
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-cyan-400">
               Problem
@@ -54,9 +55,9 @@ function ProjectDetail() {
             </p>
             <p className="mt-4 leading-7 text-slate-300">{project.impact}</p>
           </div>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+        <Reveal className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
             <h2 className="text-2xl font-bold text-white">
               Technical Responsibilities
@@ -92,9 +93,9 @@ function ProjectDetail() {
               ))}
             </div>
           </section>
-        </div>
+        </Reveal>
 
-        <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+        <Reveal className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
           <section className="rounded-3xl border border-white/10 bg-white/[0.03] p-8">
             <h2 className="text-2xl font-bold text-white">What I Learned</h2>
 
@@ -122,7 +123,7 @@ function ProjectDetail() {
               ))}
             </div>
           </section>
-        </div>
+        </Reveal>
       </section>
     </main>
   )

@@ -4,8 +4,8 @@ import Button from "../ui/Button"
 function Hero() {
   return (
     <section className="relative isolate min-h-screen overflow-hidden bg-slate-950 px-6 pt-32 text-white">
-      <div className="absolute left-1/2 top-0 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
-      <div className="absolute bottom-0 right-0 -z-10 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-3xl" />
+      <div className="animate-slow-pulse absolute left-1/2 top-0 -z-10 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
+      <div className="animate-slow-pulse absolute bottom-0 right-0 -z-10 h-[400px] w-[400px] rounded-full bg-blue-500/10 blur-3xl" />
 
       <div className="mx-auto grid max-w-6xl items-center gap-12 py-20 md:grid-cols-2">
         <div>

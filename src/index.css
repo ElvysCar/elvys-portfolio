@@ -28,3 +28,36 @@ button {
 [id] {
   scroll-margin-top: 96px;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+@keyframes slow-pulse {
+  0%,
+  100% {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+.animate-slow-pulse {
+  animation: slow-pulse 8s ease-in-out infinite;
+}
+
+:focus-visible {
+  outline: 2px solid #22d3ee;
+  outline-offset: 4px;
+}
