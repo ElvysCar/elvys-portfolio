@@ -4,27 +4,27 @@ import { profile } from "../../data/profile"
 const navLinks = [
   {
     label: "About",
-    href: "#about",
+    href: "/#about",
   },
   {
     label: "Skills",
-    href: "#skills",
+    href: "/#skills",
   },
   {
     label: "Experience",
-    href: "#experience",
+    href: "/#experience",
   },
   {
     label: "Projects",
-    href: "#projects",
+    href: "/#projects",
   },
   {
     label: "Resume",
-    href: "#resume",
+    href: "/#resume",
   },
   {
     label: "Contact",
-    href: "#contact",
+    href: "/#contact",
   },
 ]
 
@@ -39,7 +39,7 @@ function Navbar() {
     <header className="fixed left-0 top-0 z-50 w-full border-b border-white/10 bg-slate-950/85 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <a
-          href="#"
+          href="/"
           onClick={closeMenu}
           className="text-lg font-bold text-white transition hover:text-cyan-400"
         >

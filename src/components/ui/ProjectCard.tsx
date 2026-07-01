@@ -1,3 +1,4 @@
+import { Link } from "react-router"
 import type { Project } from "../../data/projects"
 
 type ProjectCardProps = {
@@ -57,6 +58,15 @@ function ProjectCard({ project }: ProjectCardProps) {
             {item}
           </span>
         ))}
+      </div>
+
+      <div className="mt-8">
+        <Link
+          to={`/projects/${project.slug}`}
+          className="inline-flex rounded-full bg-cyan-400 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-300"
+        >
+          View Full Case Study
+        </Link>
       </div>
     </article>
   )

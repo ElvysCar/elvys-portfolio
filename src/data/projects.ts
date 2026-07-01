@@ -1,4 +1,5 @@
 export type Project = {
+  slug: string
   title: string
   category: string
   summary: string
@@ -6,10 +7,14 @@ export type Project = {
   solution: string
   impact: string
   tech: string[]
+  responsibilities: string[]
+  architecture: string[]
+  lessons: string[]
 }
 
 export const projects: Project[] = [
   {
+    slug: "multi-source-kpi-automation",
     title: "Multi-Source KPI Automation Platform",
     category: "Data Engineering / Automation",
     summary:
@@ -28,8 +33,28 @@ export const projects: Project[] = [
       "Automation",
       "Power BI Support",
     ],
+    responsibilities: [
+      "Analyzed multiple metric sources and identified common fields for standardization.",
+      "Created transformation logic to clean, normalize, and prepare performance data.",
+      "Supported the consolidation of agent metrics into a unified reporting destination.",
+      "Improved validation logic to reduce inconsistencies before reporting.",
+    ],
+    architecture: [
+      "Multiple client data sources",
+      "Python transformation layer",
+      "SQL-based validation and preparation",
+      "Unified data destination",
+      "Business intelligence and KPI reporting layer",
+    ],
+    lessons: [
+      "Improved my understanding of multi-source data pipelines.",
+      "Strengthened my ability to design reusable transformation logic.",
+      "Learned the importance of validation before data reaches dashboards.",
+      "Gained more experience connecting technical workflows with business reporting needs.",
+    ],
   },
   {
+    slug: "ai-appointment-scheduling-api",
     title: "AI Appointment Scheduling API",
     category: "AI Development / Backend",
     summary:
@@ -50,8 +75,29 @@ export const projects: Project[] = [
       "Redis",
       "PostgreSQL",
     ],
+    responsibilities: [
+      "Tested backend appointment endpoints using Postman.",
+      "Worked with serverless API deployment patterns using AWS Lambda.",
+      "Supported appointment actions such as availability checks, booking, rescheduling, and cancellation.",
+      "Helped connect AI conversation flows with external business APIs.",
+    ],
+    architecture: [
+      "AI conversation layer",
+      "API Gateway endpoint",
+      "AWS Lambda backend service",
+      "External appointment service integration",
+      "Authentication and validation layer",
+      "Database and cache support",
+    ],
+    lessons: [
+      "Strengthened my understanding of serverless backend workflows.",
+      "Improved my ability to test and validate APIs with real request scenarios.",
+      "Learned how AI systems depend on reliable backend integrations.",
+      "Gained more experience with cloud-based automation and API design.",
+    ],
   },
   {
+    slug: "etl-data-validation-automation",
     title: "ETL Data Validation Automation",
     category: "Data Engineering",
     summary:
@@ -71,5 +117,28 @@ export const projects: Project[] = [
       "Automation Scripts",
       "Data Cleaning",
     ],
+    responsibilities: [
+      "Created scripts to clean and transform recurring operational data.",
+      "Used SQL logic to validate records and identify inconsistencies.",
+      "Reduced repetitive manual preparation before reporting.",
+      "Prepared cleaner datasets for downstream analysis and dashboards.",
+    ],
+    architecture: [
+      "Raw recurring dataset",
+      "Python cleaning process",
+      "SQL validation layer",
+      "Prepared reporting dataset",
+      "Dashboard or analysis destination",
+    ],
+    lessons: [
+      "Improved my understanding of data quality workflows.",
+      "Learned how small automation scripts can create strong business value.",
+      "Strengthened my Python and SQL integration skills.",
+      "Gained experience preparing data for reliable reporting processes.",
+    ],
   },
 ]
+
+export function getProjectBySlug(slug: string | undefined) {
+  return projects.find((project) => project.slug === slug)
+}
